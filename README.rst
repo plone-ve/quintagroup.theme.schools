@@ -90,6 +90,12 @@ Additional features can be activated:
 * ``Products.LinguaPlone``
    Adds multilingual functionality with adjusted styling for language selectors.
 
+* ``quintagroup.slidertemplates``
+    Enhanced Responsive Views for NG Collection Portlet (Carousel, Shelf, Tabs)
+
+* ``quintagroup.megamenu``  
+    Clean and professional fully responsive Mega Menu solution for Plone. This product allows Plone website to display panel added to portal top as drop-down menu for navigation tabs.
+
 Dependencies
 ------------
 
@@ -107,6 +113,9 @@ Theme was tested with:
 * Products.PloneFormGen 1.7.6
 * quintagroup.dropdownmenu 1.2.11
 * Products.LinguaPlone 4.1.3
+* quintagroup.megamenu 1.2
+* quintagroup.megamenu 1.3
+* quintagroup.slidertemplates 1.0
 
 Home Directory
 --------------
