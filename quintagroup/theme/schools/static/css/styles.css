@@ -2388,6 +2388,10 @@ div#portal-searchbox {
 #portal-column-two {
   width:auto !important;
   }
+#portal-columns .panels div.cell {
+  left:0;
+  width: 100% !important;
+  }
 #portal-column-one .visualPadding,
 #portal-column-two .visualPadding {
   margin:0;

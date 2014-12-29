@@ -83,7 +83,14 @@
         <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" method="raw"/>
     <before css:theme="#portal-globalnav" css:content="#portal-logo+p.hiddenStructure" />
     <after css:theme="#portal-globalnav" css:content="#portal-globalnav-mobile" />
-    <after css:theme="#portal-globalnav" css:content="#portal-top .panels" css:if-content="#nav" if-path="@@manage-panels"/> 
+    
+
+    <copy attributes="class"  css:theme="#theme-globalnav" css:content="#portal-globalnav" />
+    <after css:theme="#portal-globalnav" css:content="#portal-top .panels" />
+    <drop css:content="#portal-top .panels .panel-0" css:if-content="#nav" if-not-path="@@manage-panels"/>
+
+
+
 
     <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
     <replace css:content-children="#portal-column-content" css:theme="#portal-column-content .documentContent" />
