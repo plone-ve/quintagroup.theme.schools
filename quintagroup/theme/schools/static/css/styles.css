@@ -672,6 +672,7 @@ input.searchButton.searchPage {
   }
   
 /*---------- PORTAL BREAD CRUMBS ----------*/ 
+
 #portal-breadcrumbs {
   background:#dadada url(../images/sprite.png) repeat-x 100% 0;
   border-color:#ccc;
@@ -686,13 +687,14 @@ input.searchButton.searchPage {
   color:#73A20F;
   }
 
-/*----- PORTAL GLOBALBNAV -----*/
-#portal-globalnav {
+/*----- THEME GLOBALBNAV -----*/
+
+#theme-globalnav {
   background:transparent;
   font-size:1em;
   margin:0;
   }
-#portal-globalnav li {
+#theme-globalnav > li {
   background:url(../images/sprite.png) repeat-x 0 0;
   border-color:#ccc;
   border-style:solid;
@@ -700,7 +702,7 @@ input.searchButton.searchPage {
   float:left;
   margin:0 1px 0 0;
   }
-ul#portal-globalnav li a { /* hack for dropdown menu, ul */
+#theme-globalnav li > a { /* hack for dropdown menu, ul */
   border:0;
   color:#565656;
   display:block;
@@ -709,99 +711,94 @@ ul#portal-globalnav li a { /* hack for dropdown menu, ul */
   min-width:34px;
   padding:4px 20px 3px;
   text-transform:uppercase;
-  white-space:nowrap;
   }
-ul#portal-globalnav li > a {
+#theme-globalnav > li > a {
   background:url(../images/sprite.png) no-repeat 0 -934px;
   }
-
-#portal-globalnav li.selected a,
-#portal-globalnav li.selected a:hover,
-#portal-globalnav li a:hover,
-#portal-globalnav.megamenu #nav > li:hover > a {
+#theme-globalnav > li.selected > a,
+#theme-globalnav > li.selected > a:hover,
+#theme-globalnav > li > a:hover,
+#theme-globalnav.megamenu > li:hover > a {
   background:transparent url(../images/sprite.png) no-repeat 0 -934px;
   color:#000; 
   }
-ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
+ul#theme-globalnav li.selected a { /* hack for dropdown menu, ul */
   background-color:transparent;
   color:#000;
-  }
+  } 
 
 /*---------- FIXES FOR QUINTAGROUP.DROPDOWNMENU----------*/
-#portal-globalnav ul li {
+
+#globalnav-wrapper li ul {
+  display: none;
+  position: absolute;
+  width: 180px;
+  border: 0;
+  margin: 0;
   background:#ddd;
+  z-index: 9;
   }
-#portal-globalnav ul li:hover {
+#globalnav-wrapper li:hover > ul {
+  display: block;
+  }
+#theme-globalnav ul li a {
+  background: none;
+  }
+#theme-globalnav ul li {
+  border: 0;
+  background: none;
+  float: none;
+  position: relative;
+  width: 100%;
+  }
+#theme-globalnav ul li:hover {
   background:#ccc;
   }
-#portal-globalnav ul li a { 
-  background:none !important;
-  }
-ul#portal-globalnav ul li a { 
-  color:#565656;
-  }
-#portal-globalnav li.selected ul a, 
-#portal-globalnav li.selected ul a:hover, 
-#portal-globalnav li ul a:hover {
-  background:#ccc;
+#theme-globalnav ul li:hover > a {
   color:#000;
   }
-ul#portal-globalnav li.selected ul li a {
-  color:#565656;
-  }
-ul#portal-globalnav ul li a.hasChildrens:hover {
-  background-color:#ccc;
-  }
-ul#portal-globalnav:hover li:hover > a {
-  background-color:transparent;
-  color:#000;
+#theme-globalnav ul ul {
+  left: 100%;
+  top: 0;
   }
 
 /*-----------megamenu------------*/
 
-#portal-globalnav ul#nav > li {
-  background: url(../images/sprite.png) repeat-x 0 0;
+#portal-megamenu .megamenu-nav:hover > li:hover > a {
+  background-color: transparent;
+  color: #000;
   }
-#portal-globalnav ul#nav > li > a {
-  border: 0;
+#theme-globalnav .subs {
+  left: 0;
+  }
+.megamenu-nav .portletHeader {
   color: #565656;
-  display: block;
-  line-height: 1.6em;
-  margin-right: 0;
-  min-width: 34px;
-  padding: 4px 20px 3px;
-  text-transform: uppercase;
-  white-space: nowrap;
-   background: url(../images/sprite.png) no-repeat 0 -934px !important; 
   }
 .subs > ol {
   margin: 0;
   }
-#portal-globalnav .subs > ol li {
+#theme-globalnav .subs > ol li {
   float: none;
   border: 0;
   }
-#nav .portletNavigationTree {
-  background-color: transparent;
-  }
-#nav .subs {
-  box-sizing:border-box;
-  padding: 0 15px;
-  }
-#nav li ol dt {
-  margin: 1em 0 0; 
-  }
-#portal-globalnav ul#nav .subs li:hover {
+#portal-globalnav ul .subs li:hover {
   background: none;
   }
-#portal-globalnav.megamenu #nav > li:hover > a,
-#portal-globalnav.megamenu #nav > li.open > a  {
+#portal-globalnav.megamenu  li:hover > a,
+#portal-globalnav.megamenu  li.open > a  {
   color: #0B4379;
   }
 #portal-column-content > .panels {
   padding: 10px 0;
   clear: both
   }
+#portal-megamenu .subs a {
+  color: #565656;
+  }
+#portal-megamenu .subs a:hover {
+  color: #000;
+  }
+
 /*---------- CAROUSEL ----------*/
 
 div.carousel {
@@ -1203,6 +1200,7 @@ div.portletStaticText {
   }
 
 /*----- Portlet Calendar -----*/
+
 .portletCalendar dt.portletHeader {
   text-align:center;
   }
@@ -1232,10 +1230,12 @@ div.portletStaticText {
   background-color: #EEEEEE;
   font-weight: bold;
   }
+.ploneCalendar td.today,
 .ploneCalendar .todayevent {
   background-color: #EEEEEE;
   border: 2px solid #205C90;
   font-weight: bold;
+  color: #FF7E00;
   }
 
 /*----- Form Tabs -----*/
@@ -2320,28 +2320,6 @@ div.cell {
   margin:0;
   position:static;
   }
-#portal-globalnav.mobileMenuOn {
-  display:none;
-  }
-#portal-globalnav-mobile {
-  background:#fff;
-  border:1px solid #ccc;
-  display:block;
-  font-size:1.17em;
-  font-weight:bold;
-  line-height:1.65em;
-  margin:0.5em auto;
-  max-width:100%;
-  min-width:150px;
-  padding:0.4em 0.1em 0.4em 1em;
-  }
-#portal-globalnav li {
-  margin:0.3em 0 0.3em 1%;
-  width:48%;
-  }
-#portal-globalnav li ul {
-  display:none !important;
-  }
 #portal-breadcrumbs {
   padding:5px 12px;
   text-align:left;
@@ -2380,7 +2358,6 @@ div#portal-searchbox {
 .topPortlets .portletSearch .portlet-search-gadget {
   width:254px !important;
   }
-
 #visual-portal-wrapper,
 #portal-column-content.cell,
 #portal-column-content .cell,
@@ -2435,60 +2412,90 @@ div.carousel-text {
 
 /*-----------megamenu------------*/
 
-#portal-globalnav.megamenu {
+#portal-globalnav.mobileMenuOn,
+#theme-globalnav,
+#globalnav-wrapper li:hover > ul {
+  display: none;
+  }
+#theme-globalnav > li {
   width: 100%;
+  display: block;
+  }
+#globalnav-wrapper li ul ul,
+#globalnav-wrapper li ul {
+  width: 100%;
+  position: relative;
   left: 0;
-  background-color: #b4c9dd;
   }
-#portal-globalnav.megamenu li {
-  margin: 0;
-  }
-#portal-globalnav.megamenu li,
-#nav > li > a,
-#nav > li > .subs {
-  width: 100%;
-  }
-.nav_head:before {
-  font-size: 22px;
-  top: 12px;
-  }
-#portal-globalnav ul#nav > li > a {
+#globalnav-wrapper #theme-globalnav > li > a,
+#portal-megamenu .megamenu-nav > li > a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 0 10px 30px;
-  background: none !important
+  padding: 10px 0 7px 25px;
+  background: none !important;
+  position: relative;
   }
-#nav > li > .subs {
-  padding-bottom: 15px;
+#globalnav-wrapper .plus.open > a, 
+#portal-megamenu .plus.open > a {
+  color: #000;
   }
+.megamenu-nav .plus > a:after,
+.megamenu-nav .plus.open > a:after,
 li.plus.open > a:after,
 li.plus > a:after {
   content: "›";
   font-size: 24px;
-  right: 30px;
-  top:13px;
-  }
-li.plus > a:after {
+  right: 25px;
+  top: 10px;
+  right: 25px;
+  position: absolute;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
   }
-li.plus.open > a:after {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  right: 34px;
+#theme-globalnav ul li a {
+  padding: 7px 25px;
   }
-button.navbar-toggle,
-.navbar-toggle:hover, 
-.navbar-toggle:focus {
-  background-color: transparent;
+#theme-globalnav ul.globalSectionsLevel2 li a {
+  padding: 7px 50px;
+  }
+#theme-globalnav ul.globalSectionsLevel3 li a {
+  padding: 7px 75px;
+  }
+#theme-globalnav ul.globalSectionsLevel4 li a {
+  padding: 7px 100px;
+  }
+#globalnav-wrapper.open .globalnav-toggle, 
+#globalnav-wrapper .globalnav-toggle:hover,
+.megamenu.open .navbar-toggle, 
+.megamenu .navbar-toggle:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  }
+#globalnav-wrapper .globalnav-toggle .icon-bar,
+.megamenu .navbar-toggle .icon-bar {
+  background-color: #565656;
+  display: block;
+  height: 3px;
+  margin: 4px auto;
+  width: 23px;
+  }
+#globalnav-wrapper .globalnav-toggle .icon-bar,
+#globalnav-wrapper.open .globalnav-toggle .icon-bar, 
+#globalnav-wrapper .globalnav-toggle:hover .icon-bar {
   border: 0;
   }
-.navbar-toggle .icon-bar {
-  height: 3px;
-  background: #000;
+.megamenu.open .navbar-toggle .icon-bar, 
+.megamenu .navbar-toggle:hover .icon-bar,
+#globalnav-wrapper.open .globalnav-toggle .icon-bar, 
+#globalnav-wrapper .globalnav-toggle:hover .icon-bar {
+  background-color: #000;
+  }
+#portal-globalnav-mobile {
+  display: block;
+  min-width: 150px;
+  margin: 10px auto;
   }
 }
 

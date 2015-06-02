@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '6.5'
+version = '6.6'
 
 setup(name='quintagroup.theme.schools',
       version=version,

@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.6 June 02, 2015
+
+- updated styles for new versions[1.3.1] of quintagroup.dropdownmenu product [roman.ischiv] 
+
 6.5 December 29, 2014
 
 - Fixed rules ffor panels in portal-top [roman.ischiv]
