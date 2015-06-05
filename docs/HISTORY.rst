@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.7 June 05, 2015
+
+- Fixed styled for navigation on mobile screen [roman.ischiv]
+
 6.6 June 02, 2015
 
 - updated styles for new versions[1.3.1] of quintagroup.dropdownmenu product [roman.ischiv] 

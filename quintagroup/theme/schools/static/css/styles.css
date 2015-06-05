@@ -2412,12 +2412,17 @@ div.carousel-text {
 
 /*-----------megamenu------------*/
 
-#portal-globalnav.mobileMenuOn,
-#theme-globalnav,
+#globalnav-wrapper #theme-globalnav,
+#portal-megamenu #theme-globalnav,
 #globalnav-wrapper li:hover > ul {
   display: none;
   }
 #theme-globalnav > li {
+  width: 49%;
+  display: inline-block;
+  }
+#globalnav-wrapper #theme-globalnav > li,
+#portal-megamenu #theme-globalnav > li {
   width: 100%;
   display: block;
   }
