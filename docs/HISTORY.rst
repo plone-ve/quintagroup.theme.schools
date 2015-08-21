@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.8 August 21, 2015
+
+- Fixed diazo rules for favicons [roman.ischiv]
+
 6.7 June 05, 2015
 
 - Fixed styled for navigation on mobile screen [roman.ischiv]
