@@ -3,12 +3,6 @@ Installation
 
 quintagroup.theme.schools can be installed in any of the following ways. 
 
-Installation via diazo panel
-============================
-
-* Download zip file at http://plone.org/products/schools-plone-skin/releases/6.2/schools.zip
-* Import the theme at the 'Diazo theme' control panel
-
 Installation via buildout
 =========================
 
