@@ -11,6 +11,30 @@ Screenshot
    :alt: Schools Plone Theme Screenshot
    :align: center
 
+Installation
+------------
+In the buildout.cfg file of your instance:
+
+* Add ``quintagroup.theme.schools`` to the list of eggs to install, e.g.::
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        quintagroup.theme.schools
+
+* Re-run buildout::
+
+    $ ./bin/buildout
+
+* Restart the Zope server::
+
+    $ ./bin/instance restart
+
+Then activate 'Schools Theme' in Plone (Site Setup -> Add-ons).
+
+For more detailed instructions see docs/INSTALL.rst file.
+
 Features
 --------
 
@@ -106,7 +130,7 @@ Recommended
 
 Theme was tested with:
 
-* Plone 4.3rc1
+* Plone 4.3
 * plone.app.theming 1.1b2
 * Products.Carousel 2.2.1
 * Products.ContentWellPortlets 4.2.1
@@ -130,4 +154,4 @@ Authors
 * Volodymyr Rudnytskyy
 * Serhiy Valchuk  
 
-Quintagroup: http://quintagroup.com, 2013
+Quintagroup: http://quintagroup.com, 2016
