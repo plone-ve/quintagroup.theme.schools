@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.9 (unreleased)
+
+- Fixed the /++theme++quintagroup.theme.schools/favicon.ico 404 (Not Found) Error [macagua]
+
 6.8 August 21, 2015
 
 - Fixed diazo rules for favicons [roman.ischiv]
