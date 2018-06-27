@@ -3,6 +3,8 @@ ChangeLog
 
 6.9 (unreleased)
 
+- Updated the Diazo manifest file [macagua]
+
 - Fixed the /++theme++quintagroup.theme.schools/favicon.ico 404 (Not Found) Error [macagua]
 
 6.8 August 21, 2015
